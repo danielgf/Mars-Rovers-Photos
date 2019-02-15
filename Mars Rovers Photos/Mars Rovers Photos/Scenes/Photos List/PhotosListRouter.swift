@@ -11,14 +11,17 @@ import UIKit
 protocol PhotosListRouterProtocol {
 
     var viewController: PhotosListViewController? { get }
+    var viewModel: PhotosViewModel? { get }
 
-    func navigateToSomewhere()
+    func navigateToPhoto(viewModel: PhotosViewModel)
+    
+    func passDataTONextScene(segue: UIStoryboardSegue)
 }
 
 final class PhotosListRouter {
 
     weak var viewController: PhotosListViewController?
-
+    weak var viewModel: PhotosViewModel?
 
     // MARK: - Initializers
 
@@ -32,11 +35,16 @@ final class PhotosListRouter {
 // MARK: - PhotosListRouterProtocol
 
 extension PhotosListRouter: PhotosListRouterProtocol {
-
-
+    func passDataTONextScene(segue: UIStoryboardSegue) {
+        if segue.identifier == "Details" {
+            let vc = segue.destination as! PhotoDetailsViewController
+            vc.viewModel = self.viewModel!
+        }
+    }
+    
     // MARK: - Navigation
-
-    func navigateToSomewhere() {
-
+    func navigateToPhoto(viewModel: PhotosViewModel) {
+        self.viewModel = viewModel
+        viewController?.performSegue(withIdentifier: "Details", sender: nil)
     }
 }

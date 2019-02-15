@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 protocol PhotosListViewControllerInput: PhotosListPresenterOutput {
 
@@ -16,14 +17,14 @@ protocol PhotosListViewControllerOutput {
     
     var photos: [Photos]? { get }
 
-    func fetchPhotos()
+    func fetchPhotos(endPoint: String)
 }
 
 final class PhotosListViewController: UIViewController {
 
     var output: PhotosListViewControllerOutput!
     var router: PhotosListRouterProtocol!
-    fileprivate var viewModels: [PhotosListViewModel] = []
+    fileprivate var viewModel = PhotosListListViewModel()
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -59,7 +60,7 @@ final class PhotosListViewController: UIViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
-        fetchPhotos()
+        fetchPhotos(endPoint: segmentedControl.titleForSegment(at: 0) ?? "")
         setupCollectionView()
     }
 
@@ -74,11 +75,17 @@ final class PhotosListViewController: UIViewController {
 
     // MARK: - Load data
 
-    func fetchPhotos() {
-
-        // TODO: Ask the Interactor to do some work
-
-        output.fetchPhotos()
+    func fetchPhotos(endPoint: String) {
+        ProgressHUD.show()
+        output.fetchPhotos(endPoint: endPoint)
+    }
+    
+    // MARK: - Actions
+    @IBAction func segmentedControlValueChange(_ sender: UISegmentedControl) {
+        let index = sender.selectedSegmentIndex
+        let title = sender.titleForSegment(at: index) ?? ""
+        viewModel = PhotosListListViewModel()
+        fetchPhotos(endPoint: title)
     }
 }
 
@@ -87,33 +94,38 @@ final class PhotosListViewController: UIViewController {
 
 extension PhotosListViewController: PhotosListViewControllerInput {
 
-
-    // MARK: - Display logic
-
-    func displayPhotos(viewModel: [PhotosListViewModel]) {
-        self.viewModels = viewModel
+    func displayPhotos(viewModel: PhotosListListViewModel) {
+        self.viewModel = viewModel
         collectionView.reloadData()
+        ProgressHUD.dismiss()
     }
     
     func displayError(error: String) {
+        ProgressHUD.dismiss()
         print(error)
     }
 }
 
-// MARK: - Conform protocols
+// MARK: - Conform UICollectionViewDelegate, UICollectionViewDataSource, CustomLayoutDelegate protocols
 extension PhotosListViewController: UICollectionViewDelegate, UICollectionViewDataSource, CustomLayoutDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModels.count
+        return viewModel.numberOfItems
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCell.cellReuseId(), for: indexPath) as? CustomCell else { return UICollectionViewCell() }
-        cell.backgroundColor = .black
+        cell.viewModel = viewModel.itemViewModel(indexPath: indexPath)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
         return 300
     }
-
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let vm = viewModel.itemViewModel(indexPath: indexPath) {
+            router.navigateToPhoto(viewModel: vm)
+        }
+    }
+    
 }

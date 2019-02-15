@@ -25,6 +25,9 @@
                                     <segment title="Opportunity"/>
                                     <segment title="Spirit"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentedControlValueChange:" destination="Vbt-br-SsF" eventType="valueChanged" id="8Vb-qs-LpA"/>
+                                </connections>
                             </segmentedControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yRg-wH-0sT">
                                 <rect key="frame" x="8" y="100" width="359" height="567"/>
@@ -50,16 +53,63 @@
                         <viewLayoutGuide key="safeArea" id="vE0-ac-jAn"/>
                     </view>
                     <navigationItem key="navigationItem" title="Mars Rovers Photos" id="9zQ-cH-3VL">
-                        <barButtonItem key="backBarButtonItem" title=" " id="6Ev-sE-NSC"/>
+                        <barButtonItem key="backBarButtonItem" title="Back" id="6Ev-sE-NSC"/>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="yRg-wH-0sT" id="8pS-2z-GbZ"/>
                         <outlet property="segmentedControl" destination="a6F-3P-H3U" id="jNd-4v-tdL"/>
+                        <segue destination="BcR-Fp-W6Y" kind="show" identifier="Details" id="1Eg-Pa-UwW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Epw-mF-gmg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1503.2" y="-113.79310344827587"/>
+        </scene>
+        <!--Photo Details View Controller-->
+        <scene sceneID="NXm-Tb-pyq">
+            <objects>
+                <viewController id="BcR-Fp-W6Y" customClass="PhotoDetailsViewController" customModule="Mars_Rovers_Photos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MGV-VP-G0X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="j9y-gu-kau">
+                                <rect key="frame" x="0.0" y="72" width="375" height="595"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Lo-4S-0j0">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didClickOnButton:" destination="BcR-Fp-W6Y" eventType="touchUpInside" id="sqF-1R-fcI"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="naR-Z2-avQ">
+                                        <rect key="frame" x="0.0" y="44" width="375" height="551"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="j9y-gu-kau" firstAttribute="leading" secondItem="qRI-wQ-URv" secondAttribute="leading" id="G0e-uc-GnE"/>
+                            <constraint firstItem="j9y-gu-kau" firstAttribute="bottom" secondItem="qRI-wQ-URv" secondAttribute="bottom" id="YeY-ng-CXN"/>
+                            <constraint firstItem="j9y-gu-kau" firstAttribute="top" secondItem="qRI-wQ-URv" secondAttribute="top" constant="8" id="kwL-fA-dBH"/>
+                            <constraint firstAttribute="trailing" secondItem="j9y-gu-kau" secondAttribute="trailing" id="xEm-lI-uQr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qRI-wQ-URv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PYN-Ar-kA9"/>
+                    <connections>
+                        <outlet property="imageView" destination="naR-Z2-avQ" id="Hfo-ks-ddE"/>
+                        <outlet property="titleButton" destination="8Lo-4S-0j0" id="Ulb-5P-mPg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qSI-7y-vo4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2348" y="-114.69265367316342"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ixo-9O-7Dv">

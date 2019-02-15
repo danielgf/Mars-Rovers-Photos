@@ -7,12 +7,22 @@
 //
 
 import UIKit
+import SDWebImage
 
 class CustomCell: UICollectionViewCell {
 
+    var viewModel: PhotosViewModel? { didSet { updateInfo() } }
+    
+    @IBOutlet weak var photoImageView: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    fileprivate func updateInfo() {
+        photoImageView.sd_setImage(with: URL(string: viewModel?.imgSrc ?? ""), placeholderImage: UIImage(named: ""), options: .refreshCached, completed: nil)
     }
 
 }

@@ -27,8 +27,7 @@ class CustomLayout: UICollectionViewLayout {
         guard let collectionView = collectionView else {
             return 0
         }
-        let insets = collectionView.contentInset
-        return collectionView.bounds.width - (insets.left + insets.right)
+        return collectionView.bounds.width
     }
     
     override var collectionViewContentSize: CGSize {
@@ -36,6 +35,7 @@ class CustomLayout: UICollectionViewLayout {
     }
     
     override func prepare() {
+        cache.removeAll()
         guard cache.isEmpty == true, let collectionView = collectionView else {
             return
         }

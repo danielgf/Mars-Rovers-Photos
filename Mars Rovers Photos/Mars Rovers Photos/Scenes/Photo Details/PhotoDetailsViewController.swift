@@ -7,42 +7,38 @@
 //
 
 import UIKit
+import SDWebImage
 
-protocol PhotoDetailsViewControllerInput: PhotoDetailsPresenterOutput {
+protocol PhotoDetailsViewControllerInput: PhotoDetailsPresenterOutput { }
 
-}
-
-protocol PhotoDetailsViewControllerOutput {
-
-    func doSomething()
-}
+protocol PhotoDetailsViewControllerOutput { }
 
 final class PhotoDetailsViewController: UIViewController {
 
     var output: PhotoDetailsViewControllerOutput!
     var router: PhotoDetailsRouterProtocol!
+    var viewModel = PhotosViewModel()
+    
+    // MARK: - Outlets
+    @IBOutlet weak var titleButton: UIButton!
+    @IBOutlet weak var imageView: UIImageView!
     
     // MARK: - Initializers
 
-    init(configurator: PhotoDetailsConfigurator = PhotoDetailsConfigurator.shared) {
-
+    init(configurator: PhotoDetailsConfigurator = PhotoDetailsConfigurator.shared, viewModel: PhotosViewModel) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-
         configure()
     }
 
     required init?(coder aDecoder: NSCoder) {
-
         super.init(coder: aDecoder)
-
         configure()
     }
-
 
     // MARK: - Configurator
 
     private func configure(configurator: PhotoDetailsConfigurator = PhotoDetailsConfigurator.shared) {
-
         configurator.configure(viewController: self)
     }
 
@@ -50,20 +46,22 @@ final class PhotoDetailsViewController: UIViewController {
     // MARK: - View lifecycle
 
     override func viewDidLoad() {
-
         super.viewDidLoad()
-
-        doSomethingOnLoad()
+        updateView()
+        titleButton.isUserInteractionEnabled = true
     }
-
-
-    // MARK: - Load data
-
-    func doSomethingOnLoad() {
-
-        // TODO: Ask the Interactor to do some work
-
-        output.doSomething()
+    
+    // MARK: - Internal Functions
+    fileprivate func updateView() {
+        titleButton.setTitle(viewModel.camera?.name, for: .normal)
+        imageView.sd_setImage(with: URL(string: viewModel.imgSrc ), completed: nil)
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func didClickOnButton(_ sender: UIButton) {
+        titleButton.setTitle(viewModel.camera?.fullName, for: .normal)
+        sender.isUserInteractionEnabled = false
     }
 }
 

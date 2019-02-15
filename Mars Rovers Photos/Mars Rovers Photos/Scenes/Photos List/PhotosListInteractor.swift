@@ -39,8 +39,8 @@ final class PhotosListInteractor {
 
 extension PhotosListInteractor: PhotosListInteractorInput {
     
-    func fetchPhotos() {
-        worker.fetchPhotos { [weak self] photos, status in
+    func fetchPhotos(endPoint: String) {
+        worker.fetchPhotos(endPoint: endPoint) { [weak self] photos, status in
             if let strongSelf = self {
                 if let error = status?.error {
                     strongSelf.output.presentError(error: error)

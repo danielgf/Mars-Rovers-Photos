@@ -28,3 +28,11 @@ final class PhotosListConfigurator {
         viewController.router = router
     }
 }
+
+
+extension PhotosListViewController: PhotosListPresenterOutput {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        router.passDataTONextScene(segue: segue)
+    }
+}
