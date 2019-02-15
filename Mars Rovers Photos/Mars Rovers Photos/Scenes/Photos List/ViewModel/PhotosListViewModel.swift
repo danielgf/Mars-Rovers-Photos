@@ -1,5 +1,5 @@
 //
-//  PhotosListListViewModel.swift
+//  PhotosListViewModel.swift
 //  Mars Rovers Photos
 //
 //  Created by Daniel Griso Filho on 15/02/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PhotosListListViewModel {
+class PhotosListViewModel {
 
     // MARK: - Properties
 

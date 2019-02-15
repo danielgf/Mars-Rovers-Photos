@@ -27,7 +27,8 @@ class CustomLayout: UICollectionViewLayout {
         guard let collectionView = collectionView else {
             return 0
         }
-        return collectionView.bounds.width
+        let insets = collectionView.contentInset
+        return collectionView.bounds.width - (insets.left + insets.right)
     }
     
     override var collectionViewContentSize: CGSize {

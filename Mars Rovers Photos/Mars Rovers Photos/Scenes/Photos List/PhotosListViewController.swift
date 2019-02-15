@@ -17,14 +17,19 @@ protocol PhotosListViewControllerOutput {
     
     var photos: [Photos]? { get }
 
-    func fetchPhotos(endPoint: String)
+    func fetchPhotos(endPoint: String, date: Date)
+    
+    func fetchDate(date: Date) -> Date
+    
+    func verifyEmptyData(viewModel: PhotosListViewModel) -> Bool
 }
 
 final class PhotosListViewController: UIViewController {
 
     var output: PhotosListViewControllerOutput!
     var router: PhotosListRouterProtocol!
-    fileprivate var viewModel = PhotosListListViewModel()
+    fileprivate var viewModel = PhotosListViewModel()
+    var date = Date().getCurrentTime()
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -60,7 +65,7 @@ final class PhotosListViewController: UIViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
-        fetchPhotos(endPoint: segmentedControl.titleForSegment(at: 0) ?? "")
+        fetchPhotos(endPoint: segmentedControl.titleForSegment(at: 0) ?? "", date: date )
         setupCollectionView()
     }
 
@@ -75,17 +80,32 @@ final class PhotosListViewController: UIViewController {
 
     // MARK: - Load data
 
-    func fetchPhotos(endPoint: String) {
+    func fetchPhotos(endPoint: String, date: Date) {
         ProgressHUD.show()
-        output.fetchPhotos(endPoint: endPoint)
+        output.fetchPhotos(endPoint: endPoint, date: date)
     }
+    
+    func verifyItems() {
+        if output.verifyEmptyData(viewModel: viewModel) {
+            let newDate = output.fetchDate(date: date)
+            date = newDate
+            let index = segmentedControl.selectedSegmentIndex
+            let title = segmentedControl.titleForSegment(at: index) ?? ""
+            fetchPhotos(endPoint: title, date: date)
+        }else {
+            collectionView.reloadData()
+            ProgressHUD.dismiss()
+        }
+    }
+    
     
     // MARK: - Actions
     @IBAction func segmentedControlValueChange(_ sender: UISegmentedControl) {
+        viewModel = PhotosListViewModel()
+        date = Date().getCurrentTime()
         let index = sender.selectedSegmentIndex
         let title = sender.titleForSegment(at: index) ?? ""
-        viewModel = PhotosListListViewModel()
-        fetchPhotos(endPoint: title)
+        fetchPhotos(endPoint: title, date: date)
     }
 }
 
@@ -94,15 +114,16 @@ final class PhotosListViewController: UIViewController {
 
 extension PhotosListViewController: PhotosListViewControllerInput {
 
-    func displayPhotos(viewModel: PhotosListListViewModel) {
+    func displayPhotos(viewModel: PhotosListViewModel) {
         self.viewModel = viewModel
-        collectionView.reloadData()
-        ProgressHUD.dismiss()
+        
+        verifyItems()
     }
     
     func displayError(error: String) {
         ProgressHUD.dismiss()
-        print(error)
+        let alert = UIAlertController.showSimpleAlert(message: error)
+        present(alert, animated: true, completion: nil)
     }
 }
 

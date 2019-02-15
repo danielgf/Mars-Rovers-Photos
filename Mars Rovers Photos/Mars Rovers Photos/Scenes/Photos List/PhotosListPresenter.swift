@@ -15,7 +15,7 @@ protocol PhotosListPresenterInput: PhotosListInteractorOutput {
 
 protocol PhotosListPresenterOutput: class {
 
-    func displayPhotos(viewModel: PhotosListListViewModel)
+    func displayPhotos(viewModel: PhotosListViewModel)
     func displayError(error: String)
 }
 
@@ -38,7 +38,7 @@ final class PhotosListPresenter {
 extension PhotosListPresenter: PhotosListPresenterInput {
     
     func presentPhotos(photos: [Photos]) {
-        output.displayPhotos(viewModel: PhotosListListViewModel(photos))
+        output.displayPhotos(viewModel: PhotosListViewModel(photos))
     }
     
     func presentError(error: Error) {

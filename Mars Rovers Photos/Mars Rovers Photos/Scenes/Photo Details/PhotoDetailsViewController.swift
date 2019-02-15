@@ -75,6 +75,5 @@ extension PhotoDetailsViewController: PhotoDetailsViewControllerInput {
 
     func displaySomething(viewModel: PhotoDetailsViewModel) {
 
-        // TODO: Update UI
     }
 }

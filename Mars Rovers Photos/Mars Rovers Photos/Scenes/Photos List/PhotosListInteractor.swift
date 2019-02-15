@@ -32,6 +32,7 @@ final class PhotosListInteractor {
         self.output = output
         self.worker = worker
     }
+    
 }
 
 
@@ -39,8 +40,9 @@ final class PhotosListInteractor {
 
 extension PhotosListInteractor: PhotosListInteractorInput {
     
-    func fetchPhotos(endPoint: String) {
-        worker.fetchPhotos(endPoint: endPoint) { [weak self] photos, status in
+    func fetchPhotos(endPoint: String, date: Date) {
+        
+        worker.fetchPhotos(endPoint: endPoint, date: date) { [weak self] photos, status in
             if let strongSelf = self {
                 if let error = status?.error {
                     strongSelf.output.presentError(error: error)
@@ -50,5 +52,17 @@ extension PhotosListInteractor: PhotosListInteractorInput {
                 }
             }
         }
+    }
+    
+    func fetchDate(date: Date) -> Date {
+        
+        return date.daysAgo(1)
+    }
+    
+    func verifyEmptyData(viewModel: PhotosListViewModel) -> Bool {
+        if viewModel.numberOfItems == 0 {
+            return true
+        }
+        return false
     }
 }

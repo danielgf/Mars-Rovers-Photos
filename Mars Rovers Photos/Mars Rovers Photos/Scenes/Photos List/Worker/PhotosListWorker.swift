@@ -13,10 +13,11 @@ typealias RemoteCompletion = ([Photos]?, ResponseStatus?) -> Void
 
 class PhotosListWorker {
 
-    func fetchPhotos(endPoint: String, completion: @escaping RemoteCompletion) {
+    func fetchPhotos(endPoint: String, date: Date, completion: @escaping RemoteCompletion) {
         
         let changeSonda = PhotoListAPI.Constants.baseURL.rawValue.replacingOccurrences(of: PhotoListAPI.UrlParts.Key.sonda, with: endPoint)
-        let changeDate = PhotoListAPI.Constants.date.rawValue.replacingOccurrences(of: PhotoListAPI.UrlParts.Key.date, with: "2015-6-3")
+        let changeDate = PhotoListAPI.Constants.date.rawValue.replacingOccurrences(of: PhotoListAPI.UrlParts.Key.date, with: date.formateDateToString(date: date))
+//        let changeDate = PhotoListAPI.Constants.date.rawValue.replacingOccurrences(of: PhotoListAPI.UrlParts.Key.date, with: "2010-02-17")
         let finalURL = changeSonda + changeDate + PhotoListAPI.Constants.apiKey.rawValue
         
         guard let url = URL(string: finalURL) else { return completion(nil, nil) }
@@ -29,6 +30,5 @@ class PhotosListWorker {
         }) { (status) in
             completion(nil, status)
         }
-        
     }
 }
