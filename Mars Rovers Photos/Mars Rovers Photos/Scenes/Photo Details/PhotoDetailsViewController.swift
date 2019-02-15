@@ -21,8 +21,7 @@ final class PhotoDetailsViewController: UIViewController {
 
     var output: PhotoDetailsViewControllerOutput!
     var router: PhotoDetailsRouterProtocol!
-
-
+    
     // MARK: - Initializers
 
     init(configurator: PhotoDetailsConfigurator = PhotoDetailsConfigurator.shared) {

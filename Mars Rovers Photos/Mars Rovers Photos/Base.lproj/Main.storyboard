@@ -14,7 +14,7 @@
         <scene sceneID="6zY-Id-cZB">
             <objects>
                 <viewController id="Vbt-br-SsF" customClass="PhotosListViewController" customModule="Mars_Rovers_Photos" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="m5a-ij-WLi">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="m5a-ij-WLi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -32,8 +32,8 @@
                                 <collectionViewLayout key="collectionViewLayout" id="7sM-tc-5Dz" customClass="CustomLayout" customModule="Mars_Rovers_Photos" customModuleProvider="target"/>
                                 <cells/>
                                 <connections>
-                                    <outlet property="dataSource" destination="Vbt-br-SsF" id="QH3-ro-0RQ"/>
-                                    <outlet property="delegate" destination="Vbt-br-SsF" id="rZG-eo-15S"/>
+                                    <outlet property="dataSource" destination="Vbt-br-SsF" id="B6j-Qc-sSW"/>
+                                    <outlet property="delegate" destination="Vbt-br-SsF" id="Ecl-tm-ajy"/>
                                 </connections>
                             </collectionView>
                         </subviews>
@@ -53,8 +53,8 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="6Ev-sE-NSC"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="collectionView" destination="yRg-wH-0sT" id="GRr-fb-dyx"/>
-                        <outlet property="segmentedControl" destination="a6F-3P-H3U" id="NXa-ST-J5T"/>
+                        <outlet property="collectionView" destination="yRg-wH-0sT" id="8pS-2z-GbZ"/>
+                        <outlet property="segmentedControl" destination="a6F-3P-H3U" id="jNd-4v-tdL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Epw-mF-gmg" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 protocol PhotosListPresenterInput: PhotosListInteractorOutput {
 
@@ -14,7 +15,8 @@ protocol PhotosListPresenterInput: PhotosListInteractorOutput {
 
 protocol PhotosListPresenterOutput: class {
 
-    func displaySomething(viewModel: PhotosListViewModel)
+    func displayPhotos(viewModel: [PhotosListViewModel])
+    func displayError(error: String)
 }
 
 final class PhotosListPresenter {
@@ -34,15 +36,15 @@ final class PhotosListPresenter {
 // MARK: - PhotosListPresenterInput
 
 extension PhotosListPresenter: PhotosListPresenterInput {
-
-
-    // MARK: - Presentation logic
-
-    func presentSomething() {
-
-        // TODO: Format the response from the Interactor and pass the result back to the View Controller
-
-        let viewModel = PhotosListViewModel()
-        output.displaySomething(viewModel: viewModel)
+    
+    func presentPhotos(photos: [Photos]) {
+        let viewModels = photos.compactMap { photos -> PhotosListViewModel in
+            return PhotosListViewModel(eartDate: photos.earthDate, imgSrc: photos.imgSrc, id: photos.id, sol: photos.sol, camera: photos.camera, cameras: photos.rover?.cameras, rover: photos.rover)
+        }
+        output.displayPhotos(viewModel: viewModels)
+    }
+    
+    func presentError(error: Error) {
+        output.displayError(error: error.localizedDescription)
     }
 }

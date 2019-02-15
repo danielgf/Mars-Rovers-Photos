@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F41E7AFB4E1D8907F812C47 /* Pods_Mars_Rovers_Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BCDB6F3677D58DD0EA13B8 /* Pods_Mars_Rovers_Photos.framework */; };
+		68A54D4B62EBC7901DCA1C8C /* Pods_Mars_Rovers_PhotosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00AA604F43F31820705F3DB2 /* Pods_Mars_Rovers_PhotosUITests.framework */; };
 		BB1D4CE82216E81600966A5A /* UITableViewCell+UICollectionViewCell+RegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1D4CE72216E81600966A5A /* UITableViewCell+UICollectionViewCell+RegisterCell.swift */; };
 		BB1D4D6222170C7D00966A5A /* PhotosListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1D4D5B22170C7D00966A5A /* PhotosListPresenter.swift */; };
 		BB1D4D6322170C7D00966A5A /* PhotosListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1D4D5C22170C7D00966A5A /* PhotosListWorker.swift */; };
@@ -22,12 +24,24 @@
 		BB1D4D7422170F1000966A5A /* PhotoDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1D4D6D22170F1000966A5A /* PhotoDetailsInteractor.swift */; };
 		BB1D4D7522170F1000966A5A /* PhotoDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1D4D6E22170F1000966A5A /* PhotoDetailsViewModel.swift */; };
 		BB1D4D7622170F1000966A5A /* PhotoDetailsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1D4D6F22170F1000966A5A /* PhotoDetailsConfigurator.swift */; };
+		BB3A584322171E4000E2855D /* PhotosListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A584222171E4000E2855D /* PhotosListAPI.swift */; };
+		BB3A584622172A9300E2855D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A584522172A9300E2855D /* NetworkManager.swift */; };
+		BB3A584822172B1400E2855D /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A584722172B1400E2855D /* NetworkResponse.swift */; };
+		BB3A584C221732DC00E2855D /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A584B221732DC00E2855D /* GenericResponse.swift */; };
 		BB66C48C22164C7800B07D98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB66C48B22164C7800B07D98 /* AppDelegate.swift */; };
 		BB66C49122164C7800B07D98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB66C48F22164C7800B07D98 /* Main.storyboard */; };
 		BB66C49322164C7A00B07D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB66C49222164C7A00B07D98 /* Assets.xcassets */; };
 		BB66C49622164C7A00B07D98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB66C49422164C7A00B07D98 /* LaunchScreen.storyboard */; };
 		BB66C4A122164C7A00B07D98 /* Mars_Rovers_PhotosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB66C4A022164C7A00B07D98 /* Mars_Rovers_PhotosTests.swift */; };
 		BB66C4AC22164C7A00B07D98 /* Mars_Rovers_PhotosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB66C4AB22164C7A00B07D98 /* Mars_Rovers_PhotosUITests.swift */; };
+		BBF085ED22171710000A6E7A /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF085EB22171710000A6E7A /* CustomCell.swift */; };
+		BBF085EE22171710000A6E7A /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBF085EC22171710000A6E7A /* CustomCell.xib */; };
+		BBF085F02217171E000A6E7A /* CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF085EF2217171E000A6E7A /* CustomLayout.swift */; };
+		BBF085F822171B18000A6E7A /* Cameras.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF085F422171B17000A6E7A /* Cameras.swift */; };
+		BBF085F922171B18000A6E7A /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF085F522171B17000A6E7A /* Camera.swift */; };
+		BBF085FA22171B18000A6E7A /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF085F622171B17000A6E7A /* Photos.swift */; };
+		BBF085FB22171B18000A6E7A /* Rover.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF085F722171B18000A6E7A /* Rover.swift */; };
+		E62140CC874D503930BB2E37 /* Pods_Mars_Rovers_PhotosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9468932B673CD487357CBC54 /* Pods_Mars_Rovers_PhotosTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +62,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00AA604F43F31820705F3DB2 /* Pods_Mars_Rovers_PhotosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mars_Rovers_PhotosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		044BD7AE7D5DE14FBEDC01DC /* Pods-Mars Rovers Photos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mars Rovers Photos.release.xcconfig"; path = "Target Support Files/Pods-Mars Rovers Photos/Pods-Mars Rovers Photos.release.xcconfig"; sourceTree = "<group>"; };
+		09BCDB6F3677D58DD0EA13B8 /* Pods_Mars_Rovers_Photos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mars_Rovers_Photos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B15ECB5139E53E5D8530EC8 /* Pods-Mars Rovers Photos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mars Rovers Photos.debug.xcconfig"; path = "Target Support Files/Pods-Mars Rovers Photos/Pods-Mars Rovers Photos.debug.xcconfig"; sourceTree = "<group>"; };
+		26626D4A514B3AEB8B1D06BE /* Pods-Mars Rovers PhotosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mars Rovers PhotosTests.debug.xcconfig"; path = "Target Support Files/Pods-Mars Rovers PhotosTests/Pods-Mars Rovers PhotosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5D12F1C08E20625AE7F4A7E9 /* Pods-Mars Rovers PhotosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mars Rovers PhotosTests.release.xcconfig"; path = "Target Support Files/Pods-Mars Rovers PhotosTests/Pods-Mars Rovers PhotosTests.release.xcconfig"; sourceTree = "<group>"; };
+		9468932B673CD487357CBC54 /* Pods_Mars_Rovers_PhotosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mars_Rovers_PhotosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB1D4CE72216E81600966A5A /* UITableViewCell+UICollectionViewCell+RegisterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+UICollectionViewCell+RegisterCell.swift"; sourceTree = "<group>"; };
 		BB1D4D5B22170C7D00966A5A /* PhotosListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListPresenter.swift; sourceTree = "<group>"; };
 		BB1D4D5C22170C7D00966A5A /* PhotosListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListWorker.swift; sourceTree = "<group>"; };
@@ -63,6 +84,10 @@
 		BB1D4D6D22170F1000966A5A /* PhotoDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsInteractor.swift; sourceTree = "<group>"; };
 		BB1D4D6E22170F1000966A5A /* PhotoDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewModel.swift; sourceTree = "<group>"; };
 		BB1D4D6F22170F1000966A5A /* PhotoDetailsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsConfigurator.swift; sourceTree = "<group>"; };
+		BB3A584222171E4000E2855D /* PhotosListAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListAPI.swift; sourceTree = "<group>"; };
+		BB3A584522172A9300E2855D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		BB3A584722172B1400E2855D /* NetworkResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		BB3A584B221732DC00E2855D /* GenericResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
 		BB66C48822164C7800B07D98 /* Mars Rovers Photos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mars Rovers Photos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB66C48B22164C7800B07D98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB66C49022164C7800B07D98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +100,15 @@
 		BB66C4A722164C7A00B07D98 /* Mars Rovers PhotosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mars Rovers PhotosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB66C4AB22164C7A00B07D98 /* Mars_Rovers_PhotosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mars_Rovers_PhotosUITests.swift; sourceTree = "<group>"; };
 		BB66C4AD22164C7A00B07D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBF085EB22171710000A6E7A /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		BBF085EC22171710000A6E7A /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		BBF085EF2217171E000A6E7A /* CustomLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLayout.swift; sourceTree = "<group>"; };
+		BBF085F422171B17000A6E7A /* Cameras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cameras.swift; sourceTree = "<group>"; };
+		BBF085F522171B17000A6E7A /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		BBF085F622171B17000A6E7A /* Photos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		BBF085F722171B18000A6E7A /* Rover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rover.swift; sourceTree = "<group>"; };
+		CCDD4E7B43A2430D2E659C80 /* Pods-Mars Rovers PhotosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mars Rovers PhotosUITests.debug.xcconfig"; path = "Target Support Files/Pods-Mars Rovers PhotosUITests/Pods-Mars Rovers PhotosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FBFEF0A53CF8B8CB32F3F490 /* Pods-Mars Rovers PhotosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mars Rovers PhotosUITests.release.xcconfig"; path = "Target Support Files/Pods-Mars Rovers PhotosUITests/Pods-Mars Rovers PhotosUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F41E7AFB4E1D8907F812C47 /* Pods_Mars_Rovers_Photos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E62140CC874D503930BB2E37 /* Pods_Mars_Rovers_PhotosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,12 +132,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68A54D4B62EBC7901DCA1C8C /* Pods_Mars_Rovers_PhotosUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08A559BB2F8A3659DE4EE7A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0B15ECB5139E53E5D8530EC8 /* Pods-Mars Rovers Photos.debug.xcconfig */,
+				044BD7AE7D5DE14FBEDC01DC /* Pods-Mars Rovers Photos.release.xcconfig */,
+				26626D4A514B3AEB8B1D06BE /* Pods-Mars Rovers PhotosTests.debug.xcconfig */,
+				5D12F1C08E20625AE7F4A7E9 /* Pods-Mars Rovers PhotosTests.release.xcconfig */,
+				CCDD4E7B43A2430D2E659C80 /* Pods-Mars Rovers PhotosUITests.debug.xcconfig */,
+				FBFEF0A53CF8B8CB32F3F490 /* Pods-Mars Rovers PhotosUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		45D1FEB68E1F1DE08D799475 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09BCDB6F3677D58DD0EA13B8 /* Pods_Mars_Rovers_Photos.framework */,
+				9468932B673CD487357CBC54 /* Pods_Mars_Rovers_PhotosTests.framework */,
+				00AA604F43F31820705F3DB2 /* Pods_Mars_Rovers_PhotosUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BB1D4C9322165E8A00966A5A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,15 +196,34 @@
 		BB1D4D5A22170C2000966A5A /* Photos List */ = {
 			isa = PBXGroup;
 			children = (
+				BBF085F122171795000A6E7A /* ViewModel */,
+				BB3A583F22171C9B00E2855D /* Worker */,
+				BBF085EA221716F3000A6E7A /* Cell */,
 				BB1D4D6122170C7D00966A5A /* PhotosListConfigurator.swift */,
 				BB1D4D5F22170C7D00966A5A /* PhotosListInteractor.swift */,
 				BB1D4D5B22170C7D00966A5A /* PhotosListPresenter.swift */,
-				BB1D4D5C22170C7D00966A5A /* PhotosListWorker.swift */,
 				BB1D4D5D22170C7D00966A5A /* PhotosListRouter.swift */,
 				BB1D4D5E22170C7D00966A5A /* PhotosListViewController.swift */,
-				BB1D4D6022170C7D00966A5A /* PhotosListViewModel.swift */,
 			);
 			path = "Photos List";
+			sourceTree = "<group>";
+		};
+		BB3A583F22171C9B00E2855D /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				BB1D4D5C22170C7D00966A5A /* PhotosListWorker.swift */,
+				BB3A584222171E4000E2855D /* PhotosListAPI.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		BB3A584422172A5F00E2855D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BB3A584522172A9300E2855D /* NetworkManager.swift */,
+				BB3A584722172B1400E2855D /* NetworkResponse.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		BB66C47F22164C7800B07D98 = {
@@ -154,6 +233,8 @@
 				BB66C49F22164C7A00B07D98 /* Mars Rovers PhotosTests */,
 				BB66C4AA22164C7A00B07D98 /* Mars Rovers PhotosUITests */,
 				BB66C48922164C7800B07D98 /* Products */,
+				08A559BB2F8A3659DE4EE7A3 /* Pods */,
+				45D1FEB68E1F1DE08D799475 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -170,6 +251,7 @@
 		BB66C48A22164C7800B07D98 /* Mars Rovers Photos */ = {
 			isa = PBXGroup;
 			children = (
+				BBF085F222171A9D000A6E7A /* Commom */,
 				BB1D4CE62216E7E900966A5A /* Extensions */,
 				BB1D4C9322165E8A00966A5A /* Scenes */,
 				BB66C48B22164C7800B07D98 /* AppDelegate.swift */,
@@ -199,6 +281,45 @@
 			path = "Mars Rovers PhotosUITests";
 			sourceTree = "<group>";
 		};
+		BBF085EA221716F3000A6E7A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BBF085EF2217171E000A6E7A /* CustomLayout.swift */,
+				BBF085EB22171710000A6E7A /* CustomCell.swift */,
+				BBF085EC22171710000A6E7A /* CustomCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BBF085F122171795000A6E7A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BB1D4D6022170C7D00966A5A /* PhotosListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BBF085F222171A9D000A6E7A /* Commom */ = {
+			isa = PBXGroup;
+			children = (
+				BB3A584422172A5F00E2855D /* Network */,
+				BBF085F322171AA1000A6E7A /* Model */,
+			);
+			path = Commom;
+			sourceTree = "<group>";
+		};
+		BBF085F322171AA1000A6E7A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BB3A584B221732DC00E2855D /* GenericResponse.swift */,
+				BBF085F522171B17000A6E7A /* Camera.swift */,
+				BBF085F422171B17000A6E7A /* Cameras.swift */,
+				BBF085F622171B17000A6E7A /* Photos.swift */,
+				BBF085F722171B18000A6E7A /* Rover.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -206,9 +327,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB66C4B022164C7A00B07D98 /* Build configuration list for PBXNativeTarget "Mars Rovers Photos" */;
 			buildPhases = (
+				C9FB4F0518D1D367D62F4D4F /* [CP] Check Pods Manifest.lock */,
 				BB66C48422164C7800B07D98 /* Sources */,
 				BB66C48522164C7800B07D98 /* Frameworks */,
 				BB66C48622164C7800B07D98 /* Resources */,
+				F4F739EB6C627315F4DE311C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -223,6 +346,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB66C4B322164C7A00B07D98 /* Build configuration list for PBXNativeTarget "Mars Rovers PhotosTests" */;
 			buildPhases = (
+				A15534B70E1D78E17EC21786 /* [CP] Check Pods Manifest.lock */,
 				BB66C49822164C7A00B07D98 /* Sources */,
 				BB66C49922164C7A00B07D98 /* Frameworks */,
 				BB66C49A22164C7A00B07D98 /* Resources */,
@@ -241,6 +365,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB66C4B622164C7A00B07D98 /* Build configuration list for PBXNativeTarget "Mars Rovers PhotosUITests" */;
 			buildPhases = (
+				9997C358F28F5E4A962C5C1F /* [CP] Check Pods Manifest.lock */,
 				BB66C4A322164C7A00B07D98 /* Sources */,
 				BB66C4A422164C7A00B07D98 /* Frameworks */,
 				BB66C4A522164C7A00B07D98 /* Resources */,
@@ -305,6 +430,7 @@
 			files = (
 				BB66C49622164C7A00B07D98 /* LaunchScreen.storyboard in Resources */,
 				BB66C49322164C7A00B07D98 /* Assets.xcassets in Resources */,
+				BBF085EE22171710000A6E7A /* CustomCell.xib in Resources */,
 				BB66C49122164C7800B07D98 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,24 +451,131 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9997C358F28F5E4A962C5C1F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mars Rovers PhotosUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A15534B70E1D78E17EC21786 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mars Rovers PhotosTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9FB4F0518D1D367D62F4D4F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mars Rovers Photos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4F739EB6C627315F4DE311C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mars Rovers Photos/Pods-Mars Rovers Photos-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ProgressHUD/ProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mars Rovers Photos/Pods-Mars Rovers Photos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BB66C48422164C7800B07D98 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBF085F02217171E000A6E7A /* CustomLayout.swift in Sources */,
+				BB3A584322171E4000E2855D /* PhotosListAPI.swift in Sources */,
 				BB1D4D7322170F1000966A5A /* PhotoDetailsViewController.swift in Sources */,
 				BB1D4D7222170F1000966A5A /* PhotoDetailsRouter.swift in Sources */,
+				BBF085ED22171710000A6E7A /* CustomCell.swift in Sources */,
+				BBF085F822171B18000A6E7A /* Cameras.swift in Sources */,
 				BB1D4D6322170C7D00966A5A /* PhotosListWorker.swift in Sources */,
+				BBF085FA22171B18000A6E7A /* Photos.swift in Sources */,
 				BB1D4D6822170C7D00966A5A /* PhotosListConfigurator.swift in Sources */,
 				BB1D4D7022170F1000966A5A /* PhotoDetailsPresenter.swift in Sources */,
 				BB1D4D6722170C7D00966A5A /* PhotosListViewModel.swift in Sources */,
 				BB1D4D7522170F1000966A5A /* PhotoDetailsViewModel.swift in Sources */,
+				BB3A584C221732DC00E2855D /* GenericResponse.swift in Sources */,
+				BB3A584622172A9300E2855D /* NetworkManager.swift in Sources */,
 				BB1D4D7422170F1000966A5A /* PhotoDetailsInteractor.swift in Sources */,
 				BB1D4D6522170C7D00966A5A /* PhotosListViewController.swift in Sources */,
 				BB1D4D6622170C7D00966A5A /* PhotosListInteractor.swift in Sources */,
+				BB3A584822172B1400E2855D /* NetworkResponse.swift in Sources */,
+				BBF085FB22171B18000A6E7A /* Rover.swift in Sources */,
 				BB1D4CE82216E81600966A5A /* UITableViewCell+UICollectionViewCell+RegisterCell.swift in Sources */,
 				BB66C48C22164C7800B07D98 /* AppDelegate.swift in Sources */,
 				BB1D4D7622170F1000966A5A /* PhotoDetailsConfigurator.swift in Sources */,
+				BBF085F922171B18000A6E7A /* Camera.swift in Sources */,
 				BB1D4D6222170C7D00966A5A /* PhotosListPresenter.swift in Sources */,
 				BB1D4D7122170F1000966A5A /* PhotoDetailsWorker.swift in Sources */,
 				BB1D4D6422170C7D00966A5A /* PhotosListRouter.swift in Sources */,
@@ -518,6 +751,7 @@
 		};
 		BB66C4B122164C7A00B07D98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B15ECB5139E53E5D8530EC8 /* Pods-Mars Rovers Photos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -537,6 +771,7 @@
 		};
 		BB66C4B222164C7A00B07D98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 044BD7AE7D5DE14FBEDC01DC /* Pods-Mars Rovers Photos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -556,6 +791,7 @@
 		};
 		BB66C4B422164C7A00B07D98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26626D4A514B3AEB8B1D06BE /* Pods-Mars Rovers PhotosTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -577,6 +813,7 @@
 		};
 		BB66C4B522164C7A00B07D98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D12F1C08E20625AE7F4A7E9 /* Pods-Mars Rovers PhotosTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -598,6 +835,7 @@
 		};
 		BB66C4B722164C7A00B07D98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCDD4E7B43A2430D2E659C80 /* Pods-Mars Rovers PhotosUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -618,6 +856,7 @@
 		};
 		BB66C4B822164C7A00B07D98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBFEF0A53CF8B8CB32F3F490 /* Pods-Mars Rovers PhotosUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -10,4 +10,11 @@ import UIKit
 
 struct PhotosListViewModel {
 
+    let eartDate: String?
+    let imgSrc: String?
+    let id: Int?
+    let sol: Int?
+    let camera: Camera?
+    let cameras: [Cameras]?
+    let rover: Rover?
 }

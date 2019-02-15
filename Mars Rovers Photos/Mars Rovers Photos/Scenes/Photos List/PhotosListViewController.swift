@@ -13,15 +13,21 @@ protocol PhotosListViewControllerInput: PhotosListPresenterOutput {
 }
 
 protocol PhotosListViewControllerOutput {
+    
+    var photos: [Photos]? { get }
 
-    func doSomething()
+    func fetchPhotos()
 }
 
 final class PhotosListViewController: UIViewController {
 
     var output: PhotosListViewControllerOutput!
     var router: PhotosListRouterProtocol!
-
+    fileprivate var viewModels: [PhotosListViewModel] = []
+    
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
 
     // MARK: - Initializers
 
@@ -53,18 +59,26 @@ final class PhotosListViewController: UIViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
-
-        doSomethingOnLoad()
+        fetchPhotos()
+        setupCollectionView()
     }
 
+    // MARK: - Setup
+    private func setupCollectionView() {
+        collectionView.registerNibCell(CustomCell.self)
+        collectionView?.contentInset = UIEdgeInsets(top: -8, left: -8, bottom: -8, right: -8)
+        if let layout = collectionView?.collectionViewLayout as? CustomLayout {
+            layout.delegate = self
+        }
+    }
 
     // MARK: - Load data
 
-    func doSomethingOnLoad() {
+    func fetchPhotos() {
 
         // TODO: Ask the Interactor to do some work
 
-        output.doSomething()
+        output.fetchPhotos()
     }
 }
 
@@ -76,8 +90,30 @@ extension PhotosListViewController: PhotosListViewControllerInput {
 
     // MARK: - Display logic
 
-    func displaySomething(viewModel: PhotosListViewModel) {
-
-        // TODO: Update UI
+    func displayPhotos(viewModel: [PhotosListViewModel]) {
+        self.viewModels = viewModel
+        collectionView.reloadData()
     }
+    
+    func displayError(error: String) {
+        print(error)
+    }
+}
+
+// MARK: - Conform protocols
+extension PhotosListViewController: UICollectionViewDelegate, UICollectionViewDataSource, CustomLayoutDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModels.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCell.cellReuseId(), for: indexPath) as? CustomCell else { return UICollectionViewCell() }
+        cell.backgroundColor = .black
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
+        return 300
+    }
+
 }

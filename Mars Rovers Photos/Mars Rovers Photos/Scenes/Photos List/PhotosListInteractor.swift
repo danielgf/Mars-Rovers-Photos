@@ -14,13 +14,15 @@ protocol PhotosListInteractorInput: PhotosListViewControllerOutput {
 
 protocol PhotosListInteractorOutput {
 
-    func presentSomething()
+    func presentPhotos(photos: [Photos])
+    func presentError(error: Error)
 }
 
 final class PhotosListInteractor {
 
     let output: PhotosListInteractorOutput
     let worker: PhotosListWorker
+    var photos: [Photos]?
 
 
     // MARK: - Initializers
@@ -36,18 +38,17 @@ final class PhotosListInteractor {
 // MARK: - PhotosListInteractorInput
 
 extension PhotosListInteractor: PhotosListInteractorInput {
-
-
-    // MARK: - Business logic
-
-    func doSomething() {
-
-        // TODO: Create some Worker to do the work
-
-        worker.doSomeWork()
-
-        // TODO: Pass the result to the Presenter
-
-        output.presentSomething()
+    
+    func fetchPhotos() {
+        worker.fetchPhotos { [weak self] photos, status in
+            if let strongSelf = self {
+                if let error = status?.error {
+                    strongSelf.output.presentError(error: error)
+                }else if let photosArray = photos {
+                    strongSelf.photos = photosArray
+                    strongSelf.output.presentPhotos(photos: photosArray)
+                }
+            }
+        }
     }
 }
