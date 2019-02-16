@@ -1,0 +1,52 @@
+{
+    "photos": [
+        {
+            "id": 651790,
+            "sol": 5000,
+            "camera": {
+                "id": 16,
+                "name": "NAVCAM",
+                "rover_id": 6,
+                "full_name": "Navigation Camera"
+            },
+            "img_src": "https://mars.nasa.gov/mer/gallery/all/1/n/5000/1N572065026EFFD1B3P1960L0M1-BR.JPG",
+            "earth_date": "2018-02-17",
+            "rover": {
+                "id": 6,
+                "name": "Opportunity",
+                "landing_date": "2004-01-25",
+                "launch_date": "2003-07-07",
+                "status": "active",
+                "max_sol": 5111,
+                "max_date": "2018-06-11",
+                "total_photos": 198439,
+                "cameras": [
+                    {
+                        "name": "FHAZ",
+                        "full_name": "Front Hazard Avoidance Camera"
+                    },
+                    {
+                        "name": "NAVCAM",
+                        "full_name": "Navigation Camera"
+                    },
+                    {
+                        "name": "PANCAM",
+                        "full_name": "Panoramic Camera"
+                    },
+                    {
+                        "name": "MINITES",
+                        "full_name": "Miniature Thermal Emission Spectrometer (Mini-TES)"
+                    },
+                    {
+                        "name": "ENTRY",
+                        "full_name": "Entry, Descent, and Landing Camera"
+                    },
+                    {
+                        "name": "RHAZ",
+                        "full_name": "Rear Hazard Avoidance Camera"
+                    }
+                ]
+            }
+        }
+    ]
+}
