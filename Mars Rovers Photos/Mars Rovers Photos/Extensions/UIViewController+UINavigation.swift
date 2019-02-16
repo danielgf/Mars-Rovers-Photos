@@ -1,8 +1,8 @@
 //
 //  ViewController+UINavigation.swift
-//  A Lodjinha
+//  Mars Rovers Photos
 //
-//  Created by Daniel Griso Filho on 1/11/19.
+//  Created by Daniel Griso Filho on 15/02/19.
 //  Copyright © 2019 Daniel Griso Filho. All rights reserved.
 //
 

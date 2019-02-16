@@ -1,8 +1,8 @@
 //
 //  UITableViewCell+UICollectionViewCell+RegisterCell.swift
-//  A Lodjinha
+//  Mars Rovers Photos
 //
-//  Created by Daniel Griso Filho on 1/13/19.
+//  Created by Daniel Griso Filho on 15/02/19.
 //  Copyright © 2019 Daniel Griso Filho. All rights reserved.
 //
 

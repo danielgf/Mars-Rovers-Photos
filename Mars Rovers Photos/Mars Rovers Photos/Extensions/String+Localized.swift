@@ -1,9 +1,9 @@
 //
 //  String+.swift
-//  Viperit
+//  Mars Rovers Photos
 //
-//  Created by Ferran on 16/11/2016.
-//  Copyright © 2016 Ferran Abelló. All rights reserved.
+//  Created by Daniel Griso Filho on 15/02/19.
+//  Copyright © 2019 Daniel Griso Filho. All rights reserved.
 //
 
 import Foundation

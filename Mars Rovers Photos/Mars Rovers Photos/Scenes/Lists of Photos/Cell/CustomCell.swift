@@ -11,7 +11,7 @@ import SDWebImage
 
 class CustomCell: UICollectionViewCell {
 
-    var viewModel: PhotosViewModel? { didSet { updateInfo() } }
+    var viewModel: ListOfPhotosViewModel? { didSet { updateInfo() } }
     
     @IBOutlet weak var photoImageView: UIImageView!
     
@@ -22,7 +22,7 @@ class CustomCell: UICollectionViewCell {
     }
     
     fileprivate func updateInfo() {
-        photoImageView.sd_setImage(with: URL(string: viewModel?.imgSrc ?? ""), placeholderImage: UIImage(named: ""), options: .refreshCached, completed: nil)
+        photoImageView.sd_setImage(with: URL(string: viewModel?.imgSrc ?? ""), placeholderImage: #imageLiteral(resourceName: "Placeholder"), options: .refreshCached, completed: nil)
     }
 
 }

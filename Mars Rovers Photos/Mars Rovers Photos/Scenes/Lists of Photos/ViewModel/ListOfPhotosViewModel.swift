@@ -1,5 +1,5 @@
 //
-//  PhotosViewModel.swift
+//  ListOfPhotosViewModel.swift
 //  Mars Rovers Photos
 //
 //  Created by Daniel Griso Filho on 15/02/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PhotosViewModel {
+class ListOfPhotosViewModel {
 
     // MARK: - Initialization
 
@@ -19,7 +19,7 @@ class PhotosViewModel {
 
     // MARK: - Properties
 
-    var object: Photos?
+   var object: Photos?
     
     var eartDate: String { return object?.earthDate ?? "" }
     var imgSrc: String { return object?.imgSrc ?? "" }
@@ -28,5 +28,6 @@ class PhotosViewModel {
     var camera: Camera? { return object?.camera }
     var cameras: [Cameras]? { return object?.rover?.cameras}
     var rover: Rover? { return object?.rover }
+    
 
 }

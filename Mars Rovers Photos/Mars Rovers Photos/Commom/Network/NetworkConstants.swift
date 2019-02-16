@@ -1,5 +1,5 @@
 //
-//  PhotosListAPI.swift
+//  NetworkConstants.swift
 //  Mars Rovers Photos
 //
 //  Created by Daniel Griso Filho on 15/02/19.
@@ -14,7 +14,6 @@ final class PhotoListAPI {
         case baseURL = "https://api.nasa.gov/mars-photos/api/v1/rovers/{sonda}/photos?"
         case date = "earth_date={date}&"
         case apiKey = "api_key=SH78sjsZiCQcJgAYKYA2MfYMXoYjsrSRrJDOwx3I"
-//        case apiKey = "api_key=DEMO_KEY"
     }
     
     struct UrlParts {

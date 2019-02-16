@@ -1,23 +1,24 @@
 //
-//  PhotosListWorker.swift
+//  ListOfPhotosWorker.swift
 //  Mars Rovers Photos
 //
 //  Created by Daniel Griso Filho on 15/02/19.
-//  Copyright (c) 2019 Daniel Griso Filho. All rights reserved.
+//  Copyright © 2019 Daniel Griso Filho. All rights reserved.
 //
 
 import Foundation
-import Alamofire
 
-typealias RemoteCompletion = ([Photos]?, ResponseStatus?) -> Void
+typealias RemoteCompletion = ([Photos]?, ResponseStatus?) -> ()
 
-class PhotosListWorker {
-
-    func fetchPhotos(endPoint: String, date: Date, completion: @escaping RemoteCompletion) {
+class ListOfPhotosWorker {
+    
+    static let shared = ListOfPhotosWorker()
+    
+    func getPhotos(endPoint: String, date: Date, completion: @escaping RemoteCompletion) {
         
         let changeSonda = PhotoListAPI.Constants.baseURL.rawValue.replacingOccurrences(of: PhotoListAPI.UrlParts.Key.sonda, with: endPoint)
         let changeDate = PhotoListAPI.Constants.date.rawValue.replacingOccurrences(of: PhotoListAPI.UrlParts.Key.date, with: date.formateDateToString(date: date))
-//        let changeDate = PhotoListAPI.Constants.date.rawValue.replacingOccurrences(of: PhotoListAPI.UrlParts.Key.date, with: "2010-02-17")
+        
         let finalURL = changeSonda + changeDate + PhotoListAPI.Constants.apiKey.rawValue
         
         guard let url = URL(string: finalURL) else { return completion(nil, nil) }
