@@ -10,6 +10,7 @@ import UIKit
 
 class PhotoDetailsPresenter {
     
+    // MARK: - Variables
     weak var viewController: PhotoDetailsViewControllerAPI?
 }
 

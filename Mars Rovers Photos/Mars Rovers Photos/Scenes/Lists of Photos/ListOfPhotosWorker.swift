@@ -12,8 +12,6 @@ typealias RemoteCompletion = ([Photos]?, ResponseStatus?) -> ()
 
 class ListOfPhotosWorker {
     
-    static let shared = ListOfPhotosWorker()
-    
     func getPhotos(endPoint: String, date: Date, completion: @escaping RemoteCompletion) {
         
         let changeSonda = PhotoListAPI.Constants.baseURL.rawValue.replacingOccurrences(of: PhotoListAPI.UrlParts.Key.sonda, with: endPoint)

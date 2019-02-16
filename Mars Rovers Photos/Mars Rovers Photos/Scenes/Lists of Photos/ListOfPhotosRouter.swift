@@ -12,7 +12,6 @@ class ListOfPhotosRouter: NSObject {
     
     // MARK: - Variables
     weak var viewController: ListOfPhotosViewController?
-    var dataSource: ListOfPhotosInteractorDataSourceAPI?
     var viewModel: ListOfPhotosViewModel? 
     
     // MARK: - Internal Functions

@@ -42,7 +42,6 @@ class ListOfPhotosViewController: UIViewController {
         interactor.presenter = presenter
         presenter.viewController = viewController
         router.viewController = viewController
-        router.dataSource = interactor
     }
     
     // MARK: - Life cicle

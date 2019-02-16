@@ -10,6 +10,7 @@ import UIKit
 
 class ListOfPhotosInteractor {
     
+    // MARK: - Variables
     var presenter: ListOfPhotosPresenterAPI?
     var worker = ListOfPhotosWorker()
     var photos: [Photos]?

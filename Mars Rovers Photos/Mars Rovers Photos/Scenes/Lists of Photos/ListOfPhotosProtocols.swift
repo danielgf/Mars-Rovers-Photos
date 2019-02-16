@@ -36,5 +36,4 @@ protocol ListOfPhotosRouterAPI: class {
 }
 
 protocol ListOfPhotosDataPassingAPI: class {
-    var dataSource: ListOfPhotosInteractorDataSourceAPI? { get }
 }

@@ -10,6 +10,7 @@ import UIKit
 
 class ListOfPhotosPresenter {
     
+    // MARK: - Variables
     weak var viewController: ListOfPhotosViewControllerAPI?
 }
 

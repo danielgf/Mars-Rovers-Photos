@@ -66,6 +66,7 @@ class PhotoDetailsViewController: UIViewController {
     
     @IBAction func didClickOnButton(_ sender: UIButton) {
         titleButton.setTitle(viewModel.camera?.fullName, for: .normal)
+        title = viewModel.camera?.name
         sender.isUserInteractionEnabled = false
     }
     
@@ -82,9 +83,5 @@ class PhotoDetailsViewController: UIViewController {
 
 // MARK: - Conform to DetailsOfPhotoViewControllerAPI protocol
 extension PhotoDetailsViewController: PhotoDetailsViewControllerAPI {
-    
-    func receivedInfo(viewModel: ListOfPhotosViewModel) {
-        self.viewModel = viewModel
-    }
     
 }

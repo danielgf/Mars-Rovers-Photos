@@ -44,6 +44,22 @@
 		BBDD9E7C2217CD6D007811E9 /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD9E5F2217CD6D007811E9 /* PhotoDetailsViewController.swift */; };
 		BBDD9E7D2217CD6D007811E9 /* PhotoDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD9E602217CD6D007811E9 /* PhotoDetailsPresenter.swift */; };
 		BBDD9E812217CDD3007811E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBDD9E802217CDD3007811E9 /* Main.storyboard */; };
+		BBDD9E8F2217DD91007811E9 /* opportunity.json in Resources */ = {isa = PBXBuildFile; fileRef = BBDD9E8C2217DD90007811E9 /* opportunity.json */; };
+		BBDD9E902217DD91007811E9 /* curiosity.json in Resources */ = {isa = PBXBuildFile; fileRef = BBDD9E8D2217DD91007811E9 /* curiosity.json */; };
+		BBDD9E912217DD91007811E9 /* spirit.json in Resources */ = {isa = PBXBuildFile; fileRef = BBDD9E8E2217DD91007811E9 /* spirit.json */; };
+		BBDD9E962217DE4E007811E9 /* PhotosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD9E952217DE4E007811E9 /* PhotosTests.swift */; };
+		BBDD9E982217E308007811E9 /* RoverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD9E972217E308007811E9 /* RoverTests.swift */; };
+		BBDD9E9A2217E312007811E9 /* CameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD9E992217E312007811E9 /* CameraTests.swift */; };
+		BBDD9E9C2217E31A007811E9 /* CamerasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD9E9B2217E31A007811E9 /* CamerasTests.swift */; };
+		BBDD9EA02217E5FA007811E9 /* ListOfPhotosViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD9E9F2217E5FA007811E9 /* ListOfPhotosViewControllerTests.swift */; };
+		BBDD9EA22217E610007811E9 /* ListOfPhotosWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD9EA12217E610007811E9 /* ListOfPhotosWorkerTests.swift */; };
+		BBDD9EA42217E61C007811E9 /* ListOfPhotosRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD9EA32217E61C007811E9 /* ListOfPhotosRouterTests.swift */; };
+		BBDD9EA62217E632007811E9 /* ListOfPhotosInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD9EA52217E632007811E9 /* ListOfPhotosInteractorTests.swift */; };
+		BBDD9EA82217E63F007811E9 /* ListOfPhotosPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD9EA72217E63F007811E9 /* ListOfPhotosPresenterTests.swift */; };
+		BBDD9EAB2217F015007811E9 /* PhotoDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD9EAA2217F015007811E9 /* PhotoDetailsViewControllerTests.swift */; };
+		BBDD9EAD2217F02A007811E9 /* PhotoDetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD9EAC2217F02A007811E9 /* PhotoDetailsPresenterTests.swift */; };
+		BBDD9EAF2217F03D007811E9 /* PhotoDetailsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD9EAE2217F03D007811E9 /* PhotoDetailsInteractorTests.swift */; };
+		BBDD9EB12217F052007811E9 /* PhotoDetailsWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD9EB02217F052007811E9 /* PhotoDetailsWorkerTests.swift */; };
 		E62140CC874D503930BB2E37 /* Pods_Mars_Rovers_PhotosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9468932B673CD487357CBC54 /* Pods_Mars_Rovers_PhotosTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +129,22 @@
 		BBDD9E5F2217CD6D007811E9 /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
 		BBDD9E602217CD6D007811E9 /* PhotoDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailsPresenter.swift; sourceTree = "<group>"; };
 		BBDD9E802217CDD3007811E9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		BBDD9E8C2217DD90007811E9 /* opportunity.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = opportunity.json; sourceTree = "<group>"; };
+		BBDD9E8D2217DD91007811E9 /* curiosity.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = curiosity.json; sourceTree = "<group>"; };
+		BBDD9E8E2217DD91007811E9 /* spirit.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = spirit.json; sourceTree = "<group>"; };
+		BBDD9E952217DE4E007811E9 /* PhotosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTests.swift; sourceTree = "<group>"; };
+		BBDD9E972217E308007811E9 /* RoverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverTests.swift; sourceTree = "<group>"; };
+		BBDD9E992217E312007811E9 /* CameraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraTests.swift; sourceTree = "<group>"; };
+		BBDD9E9B2217E31A007811E9 /* CamerasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamerasTests.swift; sourceTree = "<group>"; };
+		BBDD9E9F2217E5FA007811E9 /* ListOfPhotosViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfPhotosViewControllerTests.swift; sourceTree = "<group>"; };
+		BBDD9EA12217E610007811E9 /* ListOfPhotosWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfPhotosWorkerTests.swift; sourceTree = "<group>"; };
+		BBDD9EA32217E61C007811E9 /* ListOfPhotosRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfPhotosRouterTests.swift; sourceTree = "<group>"; };
+		BBDD9EA52217E632007811E9 /* ListOfPhotosInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfPhotosInteractorTests.swift; sourceTree = "<group>"; };
+		BBDD9EA72217E63F007811E9 /* ListOfPhotosPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfPhotosPresenterTests.swift; sourceTree = "<group>"; };
+		BBDD9EAA2217F015007811E9 /* PhotoDetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewControllerTests.swift; sourceTree = "<group>"; };
+		BBDD9EAC2217F02A007811E9 /* PhotoDetailsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsPresenterTests.swift; sourceTree = "<group>"; };
+		BBDD9EAE2217F03D007811E9 /* PhotoDetailsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsInteractorTests.swift; sourceTree = "<group>"; };
+		BBDD9EB02217F052007811E9 /* PhotoDetailsWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsWorkerTests.swift; sourceTree = "<group>"; };
 		CCDD4E7B43A2430D2E659C80 /* Pods-Mars Rovers PhotosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mars Rovers PhotosUITests.debug.xcconfig"; path = "Target Support Files/Pods-Mars Rovers PhotosUITests/Pods-Mars Rovers PhotosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FBFEF0A53CF8B8CB32F3F490 /* Pods-Mars Rovers PhotosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mars Rovers PhotosUITests.release.xcconfig"; path = "Target Support Files/Pods-Mars Rovers PhotosUITests/Pods-Mars Rovers PhotosUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -208,6 +240,10 @@
 		BB66C49F22164C7A00B07D98 /* Mars Rovers PhotosTests */ = {
 			isa = PBXGroup;
 			children = (
+				BBDD9E852217D24D007811E9 /* Mock */,
+				BBDD9E922217DDDA007811E9 /* Commom */,
+				BBDD9E822217D13F007811E9 /* Services */,
+				BBDD9E882217D75D007811E9 /* Scenes */,
 				BB66C4A022164C7A00B07D98 /* Mars_Rovers_PhotosTests.swift */,
 				BB66C4A222164C7A00B07D98 /* Info.plist */,
 			);
@@ -317,6 +353,74 @@
 				BBDD9E5E2217CD6D007811E9 /* PhotoDetailsProtocols.swift */,
 				BBDD9E5F2217CD6D007811E9 /* PhotoDetailsViewController.swift */,
 				BBDD9E602217CD6D007811E9 /* PhotoDetailsPresenter.swift */,
+			);
+			path = "Details of Photos";
+			sourceTree = "<group>";
+		};
+		BBDD9E822217D13F007811E9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BBDD9E852217D24D007811E9 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				BBDD9E8D2217DD91007811E9 /* curiosity.json */,
+				BBDD9E8C2217DD90007811E9 /* opportunity.json */,
+				BBDD9E8E2217DD91007811E9 /* spirit.json */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		BBDD9E882217D75D007811E9 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				BBDD9EA92217EFEC007811E9 /* Details of Photos */,
+				BBDD9E892217D768007811E9 /* List of Photos */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		BBDD9E892217D768007811E9 /* List of Photos */ = {
+			isa = PBXGroup;
+			children = (
+				BBDD9EA52217E632007811E9 /* ListOfPhotosInteractorTests.swift */,
+				BBDD9EA72217E63F007811E9 /* ListOfPhotosPresenterTests.swift */,
+				BBDD9EA32217E61C007811E9 /* ListOfPhotosRouterTests.swift */,
+				BBDD9E9F2217E5FA007811E9 /* ListOfPhotosViewControllerTests.swift */,
+				BBDD9EA12217E610007811E9 /* ListOfPhotosWorkerTests.swift */,
+			);
+			path = "List of Photos";
+			sourceTree = "<group>";
+		};
+		BBDD9E922217DDDA007811E9 /* Commom */ = {
+			isa = PBXGroup;
+			children = (
+				BBDD9E932217DDEC007811E9 /* Model */,
+			);
+			path = Commom;
+			sourceTree = "<group>";
+		};
+		BBDD9E932217DDEC007811E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BBDD9E952217DE4E007811E9 /* PhotosTests.swift */,
+				BBDD9E972217E308007811E9 /* RoverTests.swift */,
+				BBDD9E992217E312007811E9 /* CameraTests.swift */,
+				BBDD9E9B2217E31A007811E9 /* CamerasTests.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BBDD9EA92217EFEC007811E9 /* Details of Photos */ = {
+			isa = PBXGroup;
+			children = (
+				BBDD9EAC2217F02A007811E9 /* PhotoDetailsPresenterTests.swift */,
+				BBDD9EAE2217F03D007811E9 /* PhotoDetailsInteractorTests.swift */,
+				BBDD9EB02217F052007811E9 /* PhotoDetailsWorkerTests.swift */,
+				BBDD9EAA2217F015007811E9 /* PhotoDetailsViewControllerTests.swift */,
 			);
 			path = "Details of Photos";
 			sourceTree = "<group>";
@@ -440,6 +544,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBDD9E912217DD91007811E9 /* spirit.json in Resources */,
+				BBDD9E8F2217DD91007811E9 /* opportunity.json in Resources */,
+				BBDD9E902217DD91007811E9 /* curiosity.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,7 +697,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBDD9EAB2217F015007811E9 /* PhotoDetailsViewControllerTests.swift in Sources */,
+				BBDD9EB12217F052007811E9 /* PhotoDetailsWorkerTests.swift in Sources */,
+				BBDD9EAF2217F03D007811E9 /* PhotoDetailsInteractorTests.swift in Sources */,
+				BBDD9E9A2217E312007811E9 /* CameraTests.swift in Sources */,
+				BBDD9E9C2217E31A007811E9 /* CamerasTests.swift in Sources */,
+				BBDD9EA82217E63F007811E9 /* ListOfPhotosPresenterTests.swift in Sources */,
+				BBDD9EAD2217F02A007811E9 /* PhotoDetailsPresenterTests.swift in Sources */,
+				BBDD9EA42217E61C007811E9 /* ListOfPhotosRouterTests.swift in Sources */,
+				BBDD9EA02217E5FA007811E9 /* ListOfPhotosViewControllerTests.swift in Sources */,
+				BBDD9E982217E308007811E9 /* RoverTests.swift in Sources */,
+				BBDD9EA22217E610007811E9 /* ListOfPhotosWorkerTests.swift in Sources */,
+				BBDD9E962217DE4E007811E9 /* PhotosTests.swift in Sources */,
 				BB66C4A122164C7A00B07D98 /* Mars_Rovers_PhotosTests.swift in Sources */,
+				BBDD9EA62217E632007811E9 /* ListOfPhotosInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

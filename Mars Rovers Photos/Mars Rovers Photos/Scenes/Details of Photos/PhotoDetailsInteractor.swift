@@ -10,6 +10,7 @@ import UIKit
 
 class PhotoDetailsInteractor {
     
+    // MARK: - Variables
     var presenter: PhotoDetailsPresenterAPI?
     var worker: PhotoDetailsWorker?
     var viewModel: ListOfPhotosViewModel?
@@ -17,9 +18,5 @@ class PhotoDetailsInteractor {
 
 // MARK: - Conform to PhotoDetailsInteractorAPI, PhotoDetailsInteractorDataSourceAPI protocols
 extension PhotoDetailsInteractor: PhotoDetailsInteractorAPI, PhotoDetailsInteractorDataSourceAPI {
-    
-    func getPhotoInfo() {
-//        presenter?.presentUpdatePhoto(viewModel: viewModel!)
-    }
     
 }
